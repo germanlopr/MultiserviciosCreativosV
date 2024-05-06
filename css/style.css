@@ -16,7 +16,7 @@ body {
 }
 
 /* Header and Navigation */
-/* Estilos para los encabezados */
+/* Estilos para los encabezados CLAUDE */
 h1 {
   color: #FFD32D; /* Amarillo suave */
 }
@@ -28,7 +28,7 @@ h2 {
 h3 {
   color: #FF9900; /* Naranja */
 }
-/*sugeridos por CLAUDE*/
+/* finsugeridos por CLAUDE*/
 header {
   position: fixed; /* Cambiar a posición fija */
   top: 0; /* Alinear en la parte superior */
