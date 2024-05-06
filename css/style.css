@@ -1,10 +1,12 @@
 /* General Styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Allerta&family=Exo+2:wght@700&display=swap');
-    /* Estilos para las secciones desplazables */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Estilos para las secciones desplazables */
 html,
 body {
-  /* height: 100%; */
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Allerta', sans-serif;
@@ -12,18 +14,19 @@ body {
 }
 
 /* Header and Navigation */
+
 header {
-  position: absolute;
-  top: 2.8125rem;
+  position: fixed; /* Cambiar a posición fija */
+  top: 0; /* Alinear en la parte superior */
   left: 0;
   right: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
   z-index: 1;
+  padding: 10px; /* Agregar un poco de espaciado interno */
 }
 
 nav {
   background-color: transparent;
-
 }
 
 nav ul {
@@ -35,21 +38,27 @@ nav ul {
 }
 
 nav ul li {
-   margin: 0 1.25rem;
+  /* margin: 0 1.25rem; */
+  margin: 0 0.625rem;
 }
 
+/*cambios para que al cambiar seccion se redusca el nav*/
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-family: 'Allerta', sans-serif;
+  font-size: 14px; /* Reducir el tamaño de fuente */
+  padding: 5px 10px; /* Agregar un poco de espaciado interno */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
 }
-
+/*cambios para que al cambiar seccion se redusca el nav*/
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Cambiar el color de fondo al hacer hover */
+}
 /* Main Content */
 .container {
-
   position: relative;
   overflow: hidden;
-  
 }
 
 .left-section {
@@ -57,9 +66,10 @@ nav ul li a {
   top: 50%;
   left: 2.5rem;
   transform: translateY(-50%);
-  color: #fff; 
-   width: 40%;
-  z-index: 2; /* Increase z-index to render on top of .opacity-part */
+  color: #fff;
+  width: 40%;
+  z-index: 2;
+  /* Increase z-index to render on top of .opacity-part */
 }
 
 .left-section .title {
@@ -80,13 +90,12 @@ nav ul li a {
   text-align: center;
 }
 
-
 .btn {
   display: inline-block;
   background-color: #FFA500;
   color: #fff;
   text-decoration: none;
-   padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 1.875rem;
   font-family: 'Allerta', sans-serif;
   font-size: 1rem;
@@ -96,9 +105,9 @@ nav ul li a {
 }
 
 .btn:hover {
-  background-color: #FF8C00; /* Cambiar el color de fondo al pasar el ratón */
+  background-color: #FF8C00;
+  /* Cambiar el color de fondo al pasar el ratón */
 }
-
 
 .right-section img {
   height: 31.25rem;
@@ -108,7 +117,6 @@ nav ul li a {
   -webkit-mask-image: linear-gradient(to left, #232931, transparent 50%);
   mask-image: linear-gradient(to left, #232931, transparent 50%);
 }
-
 
 .section {
   height: 100vh;
@@ -137,6 +145,112 @@ nav ul li a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.image-column {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover img {
+  transform: scale(1.1);
+}
+
+/*lo de chatgpt*/
+.text-card,
+.image-placeholder {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.text-card.animate-left,
+.image-placeholder.animate-right {
+  opacity: 1;
+}
+
+.text-card {
+  transition-delay: 0.2s;
+}
+
+.image-placeholder {
+  transition-delay: 0.4s;
+}
+/*fin chat gpt*/
+
+/* Colores por sección */
+#section1 {
+  background: linear-gradient(90deg, #0a1c40, #0f2453, #142d67);
+}
+
+#section2 {
+  background: linear-gradient(90deg, #191d3a, #272b46, #363a52);
+}
+
+#section3 {
+  background: linear-gradient(90deg, #0f2933, #14516d, #238ec7);
+}
+
+#section4 {
+  background: linear-gradient(90deg, #00093c, #001e67, #002c92);
+}
+
+#section5 {
+  background: linear-gradient(90deg, #0c2461, #114584, #1867a8);
+}
+
+#section6 {
+  background: linear-gradient(90deg, #06283d, #0d3d5c, #147b7a);
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #64B0BE;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  z-index: 1;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.linkedin {
+  background-image: url('/img/linkedin.png');
+}
+
+.telegram {
+  background-image: url('/img/telegram.png');
+}
+
+.whatsapp {
+  background-image: url('/img/whatsapp.png');
+}
 
 /* Estilos para el cursor personalizado */
 .custom-cursor {
@@ -152,80 +266,15 @@ nav ul li a {
   animation: cursor-animation 1s infinite alternate;
   /* Animación para mover el cursor */
 }
-/* definir tamaños y ubicaciones de imagenes */
 
-.image-column {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@keyframes cursor-animation {
+  from {
+    transform: translateY(0);
+  }
 
-.image-placeholder {
-  width: 100%;
-  max-width: 21.875rem;
-  height: 15.625rem;
-  background-color: #ccc;
-  border-radius: 10px;
-}
-
-/* Colores por sección */
-        /* #section1 {
-            background: linear-gradient(90deg, #031634, #033649, #034f66);
-        } */
-
-        #section1 {
-            background: linear-gradient(90deg, #0a1c40, #0f2453, #142d67);
-        }
-
-        #section2 {
-            background: linear-gradient(90deg, #191d3a, #272b46, #363a52);
-        }
-
-        #section3 {
-            background: linear-gradient(90deg, #0f2933, #14516d, #238ec7);
-        }
-
-        #section4 {
-            background: linear-gradient(90deg, #00093c, #001e67, #002c92);
-        }
-
-        #section5 {
-            background: linear-gradient(90deg, #0c2461, #114584, #1867a8);
-        }
-
-  /* Footer */
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #64B0BE;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
-    z-index: 1;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-}
-
-.linkedin {
-    background-image: url('/img/linkedin.png');
-}
-
-.telegram {
-    background-image: url('/img/telegram.png');
-}
-
-.whatsapp {
-    background-image: url('/img/whatsapp.png');
+  to {
+    transform: translateY(20px);
+  }
 }
 
 /* Responsive Styles */
@@ -311,4 +360,4 @@ nav ul li a {
     position: static;
     margin-top: 1.25rem;
   }
-} 
+}
