@@ -10,11 +10,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Allerta', sans-serif;
-  background: linear-gradient(45deg, #080808, #232931, #03073d);
+  /* background: linear-gradient(45deg, #080808, #232931, #03073d);
+   */
+   background: linear-gradient(45deg, #0B2545, #1E5799, #38A3A5);
 }
 
 /* Header and Navigation */
+/* Estilos para los encabezados */
+h1 {
+  color: #FFD32D; /* Amarillo suave */
+}
 
+h2 {
+  color: #FFB319; /* Naranja suave */
+}
+
+h3 {
+  color: #FF9900; /* Naranja */
+}
+/*sugeridos por CLAUDE*/
 header {
   position: fixed; /* Cambiar a posición fija */
   top: 0; /* Alinear en la parte superior */
@@ -173,18 +187,21 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-/*lo de chatgpt*/
+/*lo de claude*/
+/* Estilos para ocultar las card y las imágenes inicialmente */
 .text-card,
 .image-placeholder {
   opacity: 0;
   transition: opacity 0.5s;
 }
 
+/* Estilos para mostrar las card y las imágenes con fadein */
 .text-card.animate-left,
 .image-placeholder.animate-right {
   opacity: 1;
 }
 
+/* Agregar un retraso en la animación */
 .text-card {
   transition-delay: 0.2s;
 }
@@ -192,10 +209,42 @@ nav ul li a:hover {
 .image-placeholder {
   transition-delay: 0.4s;
 }
-/*fin chat gpt*/
+
+/* Animación para agregar las clases al hacer scroll */
+.section-content:nth-child(odd) .text-card {
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.section-content:nth-child(even) .image-placeholder {
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+
+/* Keyframes para las animaciones */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*fin claude*/
 
 /* Colores por sección */
-#section1 {
+/* #section1 {
   background: linear-gradient(90deg, #0a1c40, #0f2453, #142d67);
 }
 
@@ -217,8 +266,30 @@ nav ul li a:hover {
 
 #section6 {
   background: linear-gradient(90deg, #06283d, #0d3d5c, #147b7a);
+} */
+#section1 {
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
 }
 
+#section2 {
+  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
+}
+
+#section3 {
+  background: linear-gradient(90deg, #0B6E4F, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
+}
+
+#section4 {
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
+}
+
+#section5 {
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
+}
+
+#section6 {
+  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
+}
 /* Footer */
 footer {
   position: fixed;
