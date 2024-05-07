@@ -10,9 +10,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Allerta', sans-serif;
-  /* background: linear-gradient(45deg, #080808, #232931, #03073d);
-   */
-   background: linear-gradient(45deg, #0B2545, #1E5799, #38A3A5);
+  background: linear-gradient(45deg, #080808, #232931, #03073d);
+  
+   /* background: linear-gradient(45deg, #0B2545, #1E5799, #38A3A5); */
 }
 
 /* Header and Navigation */
@@ -29,14 +29,46 @@ h3 {
   color: #FF9900; /* Naranja */
 }
 /* finsugeridos por CLAUDE*/
+
 header {
-  position: fixed; /* Cambiar a posición fija */
-  top: 0; /* Alinear en la parte superior */
+  position: absolute;
+  top: 2.8125rem;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  background-color: transparent;
   z-index: 1;
-  padding: 10px; /* Agregar un poco de espaciado interno */
+}
+
+nav {
+  background-color: transparent;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+   margin: 0 1.25rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Allerta', sans-serif;
+}
+/* header {
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+  padding: 10px; 
 }
 
 nav {
@@ -52,23 +84,24 @@ nav ul {
 }
 
 nav ul li {
-  /* margin: 0 1.25rem; */
+
   margin: 0 0.625rem;
 }
 
-/*cambios para que al cambiar seccion se redusca el nav*/
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-family: 'Allerta', sans-serif;
-  font-size: 14px; /* Reducir el tamaño de fuente */
-  padding: 5px 10px; /* Agregar un poco de espaciado interno */
-  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+  font-size: 14px; 
+  padding: 5px 10px; 
+  transition: background-color 0.3s ease; 
 }
-/*cambios para que al cambiar seccion se redusca el nav*/
+
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Cambiar el color de fondo al hacer hover */
-}
+  background-color: rgba(255, 255, 255, 0.2); 
+} */
+/*fIN NAV BAR*/
 /* Main Content */
 .container {
   position: relative;
@@ -244,7 +277,7 @@ nav ul li a:hover {
 /*fin claude*/
 
 /* Colores por sección */
-/* #section1 {
+#section1 {
   background: linear-gradient(90deg, #0a1c40, #0f2453, #142d67);
 }
 
@@ -266,30 +299,29 @@ nav ul li a:hover {
 
 #section6 {
   background: linear-gradient(90deg, #06283d, #0d3d5c, #147b7a);
-} */
-#section1 {
-  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
+}
+/* #section1 {
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); 
 }
 
 #section2 {
-  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
+  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); 
 }
 
 #section3 {
-  background: linear-gradient(90deg, #0B6E4F, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
+  background: linear-gradient(90deg, #0B6E4F, #38A3A5, #57CC99); 
 }
 
 #section4 {
-  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); 
 }
 
 #section5 {
-  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); /* Colores armónicos azules */
-}
+  background: linear-gradient(90deg, #0B2545, #1E5799, #38A3A5); 
 
 #section6 {
-  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); /* Colores armónicos verde-azulados */
-}
+  background: linear-gradient(90deg, #22577A, #38A3A5, #57CC99); 
+} */
 /* Footer */
 footer {
   position: fixed;
