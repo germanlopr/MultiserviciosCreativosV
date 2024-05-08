@@ -495,6 +495,28 @@ footer {
   font-size: 24px;
 }
 
+/* @keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image ;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+
+} */
 /* Mostrar el botón a partir de la sección 1 */
 /* #section1 ~ .section .home-btn {
   opacity: 1;
