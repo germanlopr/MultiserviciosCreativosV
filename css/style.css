@@ -470,8 +470,8 @@ footer {
  position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -486,38 +486,16 @@ footer {
   transform-origin: 100% 0;
   z-index: 99999;
   background-color: #FFB319; 
-   /*opacity: 0;*/
-   /* transform:  translateX(50%); rotate(90deg) */
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 version=%221.1%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 1024 1024%22 fill=%22%23000%22%3E%3Cpath d=%22M156.8 597.6l325.8-311.1c15.2-14.5 38.4-15.6 54.9-3.4l3.9 3.4 325.8 311.1c17 16.2 17.6 43.2 1.4 60.2-15.1 15.8-39.4 17.5-56.4 4.6l-3.8-3.2-296.4-283-296.4 283c-15.8 15.1-40.2 15.6-56.6 2l-3.6-3.4c-15.1-15.8-15.6-40.2-2-56.6l3.4-3.6z%22%3E%3C/path%3E%3C/svg%3E");
+
+  opacity: 0; /*Inicialmente invisible */
+  visibility: hidden; /*Inicialmente no visible */
+  transition: opacity 0.3s, visibility 0.3s;
+
 } 
 
 
-.home-btn i {
-  font-size: 24px;
-}
-
-/* @keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-
-  to {
+.home-btn.activo {
     opacity: 1;
-    scale: 100%;
-  }
+  visibility: visible;
 }
-
-img {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image ;
-  animation-name: show;
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-
-} */
-/* Mostrar el botón a partir de la sección 1 */
-/* #section1 ~ .section .home-btn {
-  opacity: 1;
-} */
