@@ -1,7 +1,7 @@
 // Función para mostrar el botón después de desplazarse hacia abajo 100px
 window.onscroll = function() {
     var boton = document.querySelector(".home-btn")
-    console.log(boton)
+
     // Asegúrate de que el elemento exista
     if (boton) {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
